@@ -1,0 +1,3 @@
+78e809559de08272e12e813283adde718d318045dde35dfed46d1ef15c1228ab  SetMark-0.4.0.ccx
+1e70274468639d65d35cd8942bc7c3655f4f026f819e220aa945f505f31ae5ad  SetMark-Premiere-Importer-0.4.0.zip
+1c889dc252c641be11cf79bc9713de8b4dd4c0f49065f412b8cb96030fe5497f  SetMark-Resolve-Importer.zip
