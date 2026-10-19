@@ -7,4 +7,4 @@ bcb8e3604dbd795740ed6bd54111dc1dae36117b781a4f06f419c338e48ca16f  SetMark-LTC-0.
 08e8091320143564766b6093b59c7e36ac617d7f0b7c0e34dedff88c42d99652  SetMark-Premiere-Importer-0.5.0.zip
 58e2ce197d8886c78b699a2eacd28998803b0724a6db759bf378bdb68e84a928  SetMark-Premiere-Importer-0.6.0.zip
 a055d658462f0b51a8a0fd4cce1748a2e08a3bf8eef10836252ee0eaedc23947  SetMark-Premiere-Importer-0.6.1.zip
-a8007a69cc890e89a7f8b8a39ddfb917e2bbab27acb4e20cf2ba502448107d93  SetMark-Resolve-Importer.zip
+e8ffabd58653ec195e4bcdfc2eec84ed271200adb0ee778572bd1b1f0a6d35b3  SetMark-Resolve-Importer.zip
