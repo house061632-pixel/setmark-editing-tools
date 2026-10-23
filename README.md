@@ -1,8 +1,8 @@
 # SetMark 剪輯工具
 
-## Resolve 0.6.2／PR 0.6.1 測試版：同機位重用音軌
+## Resolve 0.6.2／PR 0.6.2 測試版：同機位重用音軌
 
-[DaVinci 工具](SetMark-Resolve-Importer.zip?raw=true) · [PR 0.6.1 完整包](SetMark-Premiere-Importer-0.6.1.zip?raw=true) · [PR CCX](SetMark-0.6.1.ccx?raw=true) · [LTC 準備工具](SetMark-LTC-0.6.0.zip?raw=true) · [校驗碼](SHA256SUMS.txt)
+[DaVinci 工具](SetMark-Resolve-Importer.zip?raw=true) · [PR 0.6.2 完整包](SetMark-Premiere-Importer-0.6.2.zip?raw=true) · [PR CCX](SetMark-0.6.2.ccx?raw=true) · [LTC 準備工具](SetMark-LTC-0.6.0.zip?raw=true) · [校驗碼](SHA256SUMS.txt)
 
 1. 先將素材匯入剪輯軟體，保留 CardDock 的 VIDEO/FX3/Acam/A001、Pocket3/PA/PA001 等 Bin 結構。
 2. Resolve 點開最上層 Bin；PR 選該 Bin。工具遞迴讀取所有子 Bin。
@@ -13,7 +13,11 @@
 
 同機位、相同聲道數的連續片段共用音軌組，重疊片段與不同聲道數另分組；LTC 收音副本同樣適用。影音分成獨立片段匯入，不承諾選取連動。匯入後核對實際音軌重用、位置、長度、來源偏移與重疊；不符合時停止並清理本次新時間線。500 段連續片段的模擬測試通過，Resolve 實機與 8GB／2TB 壓力測試仍待完成。
 
-### PR 0.6.1 音軌修正
+### PR 0.6.2 時間線保留與錯誤提示
+
+建立或核對失敗時不再自動刪除新時間線，會顯示名稱、失敗階段及預期／實際影片數量。素材核對通過但 mark 匯入中斷時，取消「建立新時間線」即可對保留時間線補匯入；已加入的 mark 會略過。40 項自動測試通過，尚待 Premiere 實機驗證。
+
+### 同機位重用音軌
 
 同機位的連續片段重用相容音軌組；重疊片段或不同音軌配置另外分軌。以 PR 實際展開的音軌配置決定位置，保留音訊完整長度；可能留下少量空白樣本軌。500 段四聲道片段共用四條有素材音軌的模擬測試已通過。尚未完成 Premiere 實機及 8GB／2TB 素材壓力測試。
 
