@@ -1,5 +1,34 @@
 # SetMark 剪輯工具
 
+## 0.7.0：多 JSON 共用一條時間軸
+
+[下載 PR 0.7.0 安裝檔](SetMark-0.7.0.ccx?raw=true) · [PR 完整包與原始碼](SetMark-Premiere-Importer-0.7.0.zip?raw=true) · [DaVinci 0.7.0](SetMark-Resolve-Importer.zip?raw=true) · [校驗碼](SHA256SUMS.txt)
+
+**同一天、持續 Free Run 的多個專案可以一起匯入，不需要合併手機專案。**
+
+### Premiere：先用這個版本
+
+1. 關閉 Premiere，下載並雙擊 `SetMark-0.7.0.ccx` 更新，重新開啟 PR 的 SetMark 面板。需 Premiere 26.2+。
+2. 選當天素材的最上層 Bin，按「選擇 JSON（可多選）」一次選多個 JSON。
+3. 勾選建立新時間線，先檢查，再建立：只會產生一條時間軸。
+4. 日後補匯入：開啟原時間軸、取消「建立新時間線」、選新 JSON、檢查並確認對齊後匯入，原素材不移動。
+
+### DaVinci
+
+更新 ZIP 裡的 `SetMark Import JSON.py`。選一個 JSON 後，從同資料夾清單勾選多個檔案；可翻頁。也支援每行貼一個完整路徑。建立與補匯入的切換同上，素材範圍取目前 Bin 與所有子 Bin。
+
+### 標記與限制
+
+保留來源專案名稱、姓名及備註（包括已寫入備註的場次／鏡號／Take）。按原專案與標記 ID 去重，重複選檔或重複匯入不會增加相同記錄；同一標記的不同內容版本需只選最新檔。
+
+同批同影格記錄合併顯示；補匯入同位置新記錄時，PR 另加標記，Resolve 追加到原 SetMark 標記並保留原備註。手動標記不覆蓋，衝突與範圍外記錄會列在預覽。
+
+JSON 必須使用相同時間碼格式（含 DF/NDF）；素材仍可混合固定 fps。不同日期、時間碼重設、跨午夜需分開處理，不能只靠時間碼分辨日期。最多一次 100 個 JSON；PR 合計 18 MB、Resolve 合計 20 MB；合計 100000 個不同標記。
+
+**驗證：46 項 PR 與 31 項 Resolve 自動化測試通過，CCX 結構及 Resolve 腳本語法已檢查。新多選流程、CCX 安裝及真實素材尚未完成 Premiere／Resolve／Windows 實機驗收。請先用測試專案。**
+
+## 歷史版本
+
 ## Resolve 0.6.2／PR 0.6.2 測試版：同機位重用音軌
 
 [DaVinci 工具](SetMark-Resolve-Importer.zip?raw=true) · [PR 0.6.2 完整包](SetMark-Premiere-Importer-0.6.2.zip?raw=true) · [PR CCX](SetMark-0.6.2.ccx?raw=true) · [LTC 準備工具](SetMark-LTC-0.6.0.zip?raw=true) · [校驗碼](SHA256SUMS.txt)
